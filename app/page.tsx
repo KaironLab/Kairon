@@ -130,7 +130,7 @@ export default function Home() {
           </div>
         </section>
 
-        <Founders />
+        <Founders withPhoto={false} />
         <Cta />
       </main>
       <Footer />

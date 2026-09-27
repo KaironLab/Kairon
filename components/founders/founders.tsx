@@ -3,7 +3,12 @@ import Link from "next/link";
 import { Reveal } from "@/components/motion/reveal";
 import { ArrowIcon } from "@/components/ui/primitives";
 
-export function Founders() {
+export function Founders({
+  withPhoto = true,
+}: {
+  /** Set false to render the text-only variant (no founders photo). */
+  withPhoto?: boolean;
+}) {
   return (
     <section id="about" className="relative overflow-hidden py-28 sm:py-36">
       {/* acid grid backdrop — echoes the founders art direction */}
@@ -12,31 +17,39 @@ export function Founders() {
         className="pointer-events-none absolute inset-x-0 top-1/2 h-px bg-line"
       />
       <div className="container-k">
-        <div className="grid items-center gap-14 lg:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] lg:gap-20">
+        <div
+          className={
+            withPhoto
+              ? "grid items-center gap-14 lg:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] lg:gap-20"
+              : ""
+          }
+        >
           {/* photo */}
-          <Reveal className="order-1">
-            <div className="relative mx-auto max-w-md lg:max-w-none">
-              <div
-                aria-hidden
-                className="absolute inset-0 -z-10 [background-image:linear-gradient(var(--color-line)_1px,transparent_1px),linear-gradient(90deg,var(--color-line)_1px,transparent_1px)] [background-size:3.5rem_3.5rem]"
-              />
-              <Image
-                src="/images/founders-cutout.webp"
-                alt="Samiul and Munthakim, founders of KAIRON"
-                width={960}
-                height={960}
-                sizes="(max-width: 1024px) 90vw, 40vw"
-                className="h-auto w-full"
-                priority={false}
-              />
-              <p className="absolute -bottom-4 right-4 border border-line bg-raised px-4 py-2.5 font-mono text-[10px] uppercase tracking-[0.2em] text-muted">
-                Built by operators
-              </p>
-            </div>
-          </Reveal>
+          {withPhoto && (
+            <Reveal className="order-1">
+              <div className="relative mx-auto max-w-md lg:max-w-none">
+                <div
+                  aria-hidden
+                  className="absolute inset-0 -z-10 [background-image:linear-gradient(var(--color-line)_1px,transparent_1px),linear-gradient(90deg,var(--color-line)_1px,transparent_1px)] [background-size:3.5rem_3.5rem]"
+                />
+                <Image
+                  src="/images/founders-cutout.webp"
+                  alt="Samiul and Munthakim, founders of KAIRON"
+                  width={960}
+                  height={960}
+                  sizes="(max-width: 1024px) 90vw, 40vw"
+                  className="h-auto w-full"
+                  priority={false}
+                />
+                <p className="absolute -bottom-4 right-4 border border-line bg-raised px-4 py-2.5 font-mono text-[10px] uppercase tracking-[0.2em] text-muted">
+                  Built by operators
+                </p>
+              </div>
+            </Reveal>
+          )}
 
           {/* text block */}
-          <div className="order-2">
+          <div className={withPhoto ? "order-2" : ""}>
             <Reveal>
               <p className="eyebrow">
                 <span className="text-accent">[</span> The Operators{" "}
