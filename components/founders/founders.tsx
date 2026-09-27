@@ -41,9 +41,14 @@ export function Founders({
                   className="h-auto w-full"
                   priority={false}
                 />
-                <p className="absolute -bottom-4 right-4 border border-line bg-raised px-4 py-2.5 font-mono text-[10px] uppercase tracking-[0.2em] text-muted">
-                  Built by operators
-                </p>
+                <div className="absolute -bottom-5 right-2 -rotate-3 rounded-xl border border-line bg-bg/95 px-5 py-3 shadow-[0_10px_30px_rgba(0,0,0,0.5)] sm:right-4">
+                  <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-accent">
+                    The Kairon Studio
+                  </p>
+                  <p className="mt-0.5 text-sm font-medium text-ink">
+                    Built by operators
+                  </p>
+                </div>
               </div>
             </Reveal>
           )}
