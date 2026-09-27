@@ -117,7 +117,7 @@ export function Button({
 
 export function Wordmark({ className }: { className?: string }) {
   return (
-    <span className={cn("inline-flex items-center gap-1.5", className)}>
+    <span className={cn("inline-flex items-center gap-0.5", className)}>
       {/* Logo mark — acid-bordered box with a heavy acid K; the word follows
           immediately so the lockup reads KAIRON. (per brand logo). */}
       <span
