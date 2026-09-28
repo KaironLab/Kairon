@@ -66,6 +66,22 @@ One recurring theme only: content **rises and settles** on scroll (Reveal, once,
 | — | Performance | ✅ | Static output, 166 kB first load JS, self-hosted `next/font` woff2, no client-side data |
 | — | Accessibility | ✅ | Skip link, focus-visible ring, 44px targets on all actions, `aria-expanded` accordion, reduced-motion honored |
 
+### Case-study section (v5)
+
+- **/wins rebuilt** from the empty-state list into five editorial case
+  studies (AMUA, NexDrive, Saybeam, NIVA, Mireva) driven by `CASE_STUDIES`
+  in `lib/site.ts`. Two-column editorial layout: brand panel (per-brand
+  palette pulled from each brand's own site) + 2×2 metric grid on the left,
+  story + numbered growth-system breakdown + highlighted insight on the
+  right, hairline vertical divider between, large dividers between cases.
+- **Metrics are labeled scale indicators** — observed on-site signals, not
+  guaranteed results; disclaimer appears in the hero and under every metric
+  grid. No invented revenue/ROAS anywhere.
+- **Motion:** count-up metrics (server HTML carries final values for SEO,
+  animation re-runs on viewport entry), scroll-progress rail (sticky, xl+,
+  active number updates per case), staggered reveals, panel hover zoom.
+  All honor `prefers-reduced-motion`.
+
 ### Navbar / logo pass (v4)
 
 - **Persistent navbar** — the hide-on-scroll behavior was removed after the

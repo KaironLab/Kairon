@@ -31,7 +31,7 @@ The build is fully static (`Output: static`), so any static host works — Verce
 | `/` | Hero, statement, loop teaser, capabilities teaser, founders photo, CTA |
 | `/approach` | The Kairon Loop (full), principles, engagement path |
 | `/capabilities` | All five disciplines in detail |
-| `/wins` | **Client wins** — edit `CLIENT_WINS` in `lib/site.ts`, set `live: true` when a win is final |
+| `/wins` | **Client wins** — five editorial case studies from `CASE_STUDIES` in `lib/site.ts` |
 | `/studio` | Founders photo + story, principles, engagement path |
 | `/contact` | Dedicated conversion page with the working-session contract |
 
