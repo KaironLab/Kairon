@@ -15,10 +15,13 @@ function CountUp({ metric, color }: { metric: CaseStudyMetric; color: string }) 
   // Server HTML carries the real value (no-JS/SEO-safe); the count-up
   // re-runs it from 0 only when the card enters the viewport.
   const target = Number(metric.count);
+  // Suffix = everything after the numeric part ("231K+" -> "K+", "93%+" -> "%+",
+  // "10,000+" -> "+") so animated numbers keep their unit.
+  const suffix = metric.value.replace(/^[\d,.]+/, "");
   const finalText =
     metric.count === "" || Number.isNaN(target)
       ? metric.value
-      : target.toLocaleString("en-US");
+      : target.toLocaleString("en-US") + suffix;
   const [text, setText] = useState(finalText);
 
   useEffect(() => {
@@ -30,12 +33,12 @@ function CountUp({ metric, color }: { metric: CaseStudyMetric; color: string }) 
     const tick = (t: number) => {
       const p = Math.min(1, (t - t0) / dur);
       const eased = 1 - Math.pow(1 - p, 3);
-      setText(Math.round(target * eased).toLocaleString("en-US"));
+      setText(Math.round(target * eased).toLocaleString("en-US") + suffix);
       if (p < 1) raf = requestAnimationFrame(tick);
     };
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
-  }, [inView, target, reduce, metric.count]);
+  }, [inView, target, reduce, metric.count, suffix]);
 
   return (
     <span ref={ref} className="block text-3xl font-semibold tracking-[-0.02em]" style={{ color }}>
