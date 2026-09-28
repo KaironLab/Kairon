@@ -66,6 +66,15 @@ One recurring theme only: content **rises and settles** on scroll (Reveal, once,
 | — | Performance | ✅ | Static output, 166 kB first load JS, self-hosted `next/font` woff2, no client-side data |
 | — | Accessibility | ✅ | Skip link, focus-visible ring, 44px targets on all actions, `aria-expanded` accordion, reduced-motion honored |
 
+### Contact channels update (v6)
+
+- Studio email switched to `thekaironlab@gmail.com` (single source:
+  `SITE.email` in `lib/site.ts` — all CTAs, footer, JSON-LD follow).
+- WhatsApp added beside the email CTA on `/contact` ("Write us directly",
+  opens `wa.me/8801759556138`) and in the global CTA block ("Or write us
+  directly on WhatsApp"). `/wins` closing CTA keeps "View our approach"
+  as its secondary action per the original brief.
+
 ### Case-study section (v5)
 
 - **/wins rebuilt** from the empty-state list into five editorial case

@@ -3,6 +3,7 @@ import { Navbar } from "@/components/navbar/navbar";
 import { Reveal } from "@/components/motion/reveal";
 import { ArrowIcon } from "@/components/ui/primitives";
 import { CaseStudies } from "@/components/wins/case-studies";
+import { SITE } from "@/lib/site";
 import { Cta } from "@/components/cta/cta";
 import { Footer } from "@/components/footer/footer";
 
@@ -81,7 +82,7 @@ export default function WinsPage() {
             <Reveal delay={0.22}>
               <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
                 <a
-                  href="mailto:hello@thekairon.online?subject=Growth%20conversation"
+                  href={`mailto:${SITE.email}?subject=Growth%20conversation`}
                   className="group inline-flex min-h-11 items-center justify-center gap-2.5 bg-accent px-6 py-3 font-mono text-[11px] uppercase tracking-[0.18em] text-bg transition-colors duration-300 hover:bg-ink"
                 >
                   Start a conversation

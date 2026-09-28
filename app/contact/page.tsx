@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Navbar } from "@/components/navbar/navbar";
 import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/motion/reveal";
-import { Button } from "@/components/ui/primitives";
+import { ArrowIcon, Button } from "@/components/ui/primitives";
 import { Footer } from "@/components/footer/footer";
 import { SITE } from "@/lib/site";
 
@@ -58,14 +58,25 @@ export default function ContactPage() {
           <div className="container-k grid gap-16 lg:grid-cols-2 lg:gap-20">
             <div>
               <Reveal>
-                <Button href={mailto} external className="text-sm">
-                  {SITE.email}
-                </Button>
+                <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
+                  <Button href={mailto} external className="text-sm">
+                    {SITE.email}
+                  </Button>
+                  <a
+                    href={SITE.whatsapp}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group inline-flex min-h-11 items-center justify-center gap-2.5 border border-line px-6 py-3 font-mono text-[11px] uppercase tracking-[0.18em] text-ink transition-colors duration-300 hover:border-accent hover:text-accent"
+                  >
+                    Write us directly
+                    <ArrowIcon className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  </a>
+                </div>
               </Reveal>
               <Reveal delay={0.08}>
                 <p className="mt-6 max-w-md text-sm leading-relaxed text-muted">
-                  One email is enough — no forms, no funnels. We reply within two
-                  business days.
+                  One email or WhatsApp message is enough — no forms, no
+                  funnels. We reply within two business days.
                 </p>
               </Reveal>
 

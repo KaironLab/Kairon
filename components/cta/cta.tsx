@@ -53,10 +53,12 @@ export function Cta() {
               {SITE.email}
             </Button>
             <a
-              href={`mailto:${SITE.email}?subject=Growth%20conversation`}
+              href={SITE.whatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
               className="link-sweep inline-flex items-center py-3.5 font-mono text-[11px] uppercase tracking-[0.2em] text-muted transition-colors hover:text-ink"
             >
-              Or write to us directly
+              Or write us directly on WhatsApp
             </a>
           </div>
         </Reveal>

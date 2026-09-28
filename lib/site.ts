@@ -2,7 +2,9 @@ export const SITE = {
   name: "KAIRON",
   domain: "thekairon.online",
   url: "https://thekairon.online",
-  email: "hello@thekairon.online",
+  email: "thekaironlab@gmail.com",
+  /** WhatsApp deep link — number in international format, no spaces/dashes. */
+  whatsapp: "https://wa.me/8801759556138",
   tagline: "Growth, by design.",
   description:
     "KAIRON is a growth and performance marketing agency. We build the systems ambitious brands use to acquire customers, raise conversion, and scale revenue — paid acquisition, creative, and CRO working as one loop.",
