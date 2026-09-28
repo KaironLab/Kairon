@@ -1,6 +1,6 @@
 import { Reveal } from "@/components/motion/reveal";
 import { Button } from "@/components/ui/primitives";
-import { SITE } from "@/lib/site";
+import { EMAIL_GMAIL_COMPOSE, SITE } from "@/lib/site";
 
 const CONTRACT = [
   { k: "A working session", v: "45 minutes on your funnel, spend, and creative — not a pitch deck." },
@@ -49,7 +49,7 @@ export function Cta() {
 
         <Reveal delay={0.22}>
           <div className="mt-10 flex flex-wrap items-center gap-4">
-            <Button href={`mailto:${SITE.email}?subject=Growth%20conversation`} external>
+            <Button href={EMAIL_GMAIL_COMPOSE} external>
               {SITE.email}
             </Button>
             <a

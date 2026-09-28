@@ -4,7 +4,7 @@ import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/motion/reveal";
 import { ArrowIcon, Button } from "@/components/ui/primitives";
 import { Footer } from "@/components/footer/footer";
-import { SITE } from "@/lib/site";
+import { EMAIL_GMAIL_COMPOSE, SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Start a Conversation",
@@ -41,7 +41,7 @@ const INCLUDE = [
 ] as const;
 
 export default function ContactPage() {
-  const mailto = `mailto:${SITE.email}?subject=Growth%20conversation`;
+  const mailto = EMAIL_GMAIL_COMPOSE;
 
   return (
     <div>

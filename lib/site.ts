@@ -11,6 +11,15 @@ export const SITE = {
   founders: ["Samiul", "Munthakim"],
 } as const;
 
+/**
+ * Contact links. The Gmail compose URL opens a pre-addressed web-compose
+ * window in a new tab — it works even when no desktop mail client is
+ * configured (plain mailto: silently does nothing on many machines).
+ */
+const EMAIL_SUBJECT = "Growth conversation";
+export const EMAIL_GMAIL_COMPOSE = `https://mail.google.com/mail/?view=cm&fs=1&to=${SITE.email}&su=${encodeURIComponent(EMAIL_SUBJECT)}`;
+export const EMAIL_MAILTO = `mailto:${SITE.email}?subject=${encodeURIComponent(EMAIL_SUBJECT)}`;
+
 export const NAV_LINKS = [
   { label: "Approach", href: "/approach" },
   { label: "Capabilities", href: "/capabilities" },

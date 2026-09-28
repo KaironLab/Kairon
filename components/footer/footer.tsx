@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowIcon, Wordmark } from "@/components/ui/primitives";
-import { CAPABILITIES, NAV_LINKS, SITE } from "@/lib/site";
+import { CAPABILITIES, EMAIL_GMAIL_COMPOSE, NAV_LINKS, SITE } from "@/lib/site";
 
 export function Footer() {
   return (
@@ -66,7 +66,9 @@ export function Footer() {
           </p>
           <div className="flex items-center gap-8">
             <a
-              href={`mailto:${SITE.email}`}
+              href={EMAIL_GMAIL_COMPOSE}
+              target="_blank"
+              rel="noopener noreferrer"
               className="link-sweep inline-block py-3 font-mono text-[10px] uppercase tracking-[0.22em] text-muted transition-colors hover:text-ink"
             >
               {SITE.email}

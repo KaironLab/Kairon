@@ -99,7 +99,12 @@ export function Button({
 
   if (external) {
     return (
-      <a href={href} className={base}>
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={base}
+      >
         {children}
         <ArrowIcon className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
       </a>
