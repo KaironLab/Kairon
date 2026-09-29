@@ -78,14 +78,33 @@ export function Founders({
             <Reveal delay={0.22}>
               <div className="mt-8 flex flex-wrap gap-x-10 gap-y-6">
                 {[
-                  { name: "Samiul", focus: "Paid acquisition & growth systems" },
-                  { name: "Munthakim", focus: "Creative strategy & conversion" },
+                  {
+                    name: "Samiul",
+                    focus: "Paid acquisition & growth systems",
+                    insta: "@treckx.47",
+                    url: "https://www.instagram.com/treckx.47/",
+                  },
+                  {
+                    name: "Munthakim",
+                    focus: "Creative strategy & conversion",
+                    insta: "@munthakiim",
+                    url: "https://www.instagram.com/munthakiim/",
+                  },
                 ].map((f) => (
                   <div key={f.name}>
                     <p className="font-medium text-ink">{f.name}</p>
                     <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.18em] text-faint">
                       {f.focus}
                     </p>
+                    <a
+                      href={f.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group mt-2 inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-[0.18em] text-muted transition-colors duration-300 hover:text-accent"
+                    >
+                      {f.insta}
+                      <ArrowIcon className="h-2.5 w-2.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                    </a>
                   </div>
                 ))}
               </div>
